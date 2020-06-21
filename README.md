@@ -35,6 +35,15 @@
    - check record count, run `select count(1) from [table_name]`. Right now output will be 18207.
    - check table data, run `select * from [table_name] limit 5`
 
+## Output
+
+Output of **step 2** received from IntelliJ
+![Output from IntelliJ](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/intelliJ.png?raw=true)
+
+Verification done for **step3** from PostgresSQL shell
+![Output from PostgresSQL shell](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/postgresdb.png?raw=true)
+
+
 ## My approach
 
 For **step 1**, I have read data from csv file and written into parquet file after extracting digits from `Value` and `Wage` column and convert it into thousand pound currency. So that no need to perform repeated transformation for `Wage` and `Value` in step 2 & 3. By using parquet file format, faster performance is achived in step 2. To accomodate daily delta file, SCD type 1 will be applied.
@@ -49,11 +58,3 @@ For **step 2**, spark dataframe is created by reading parquet file and persist i
  
  For **step 3**, read the data from output parquet file created in step 1 and renamed the required column names and applied logic to read date from `MMM dd,yyyy` format, before loading the data into postgres database.
 
-
-## Output
-
-Output of **step 2** received from IntelliJ
-![Output from IntelliJ](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/intelliJ.png?raw=true)
-
-Verification done for **step3** from PostgresSQL shell
-![Output from PostgresSQL shell](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/postgresdb.png?raw=true)
