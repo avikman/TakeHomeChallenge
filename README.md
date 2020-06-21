@@ -51,4 +51,4 @@ For **step 2**, spark dataframe is created by reading parquet file and persist i
 
 
 ## Output
-![Output from IntelliJ](https://drive.google.com/file/d/1JZZZZz1Khq6djBje3jLd9hdpTcYzFBZW?raw=true)
+![Output from IntelliJ](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/intelliJ.png?raw=true)
