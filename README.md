@@ -52,8 +52,8 @@ For **step 2**, spark dataframe is created by reading parquet file and persist i
 
 ## Output
 
-Output from IntelliJ
+Output of **step 2** received from IntelliJ
 ![Output from IntelliJ](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/intelliJ.png?raw=true)
 
-Output from PostgresSQL shell
+Verification done for **step3** from PostgresSQL shell
 ![Output from PostgresSQL shell](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/postgresdb.png?raw=true)
