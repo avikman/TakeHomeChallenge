@@ -48,4 +48,7 @@ For **step 2**, spark dataframe is created by reading parquet file and persist i
  - for *problem f*, calculated average skills for good players, playing at striker `Position` (ST). Then transposed the average skill output to select top 4 average valued skills. Assumption for *problem e* & *problem f* is good players have gold card, that means their `Overall` rating is greater than equals to 74.   
  
  For **step 3**, read the data from output parquet file created in step 1 and renamed the required column names and applied logic to read date from `MMM dd,yyyy` format, before loading the data into postgres database.
- 
+
+
+## Output
+![Output from IntelliJ](https://drive.google.com/file/d/1JZZZZz1Khq6djBje3jLd9hdpTcYzFBZW?raw=true)
