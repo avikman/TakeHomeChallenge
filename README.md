@@ -1,6 +1,6 @@
 # TakeHomeChallenge
 
-## How to run ?
+## How to execute ?
 
 
 1) Please install Postgres database into docker using below steps:
