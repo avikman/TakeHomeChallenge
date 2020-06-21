@@ -25,7 +25,7 @@
 
 6) Execute `SolutionUsingDataFrame.scala` from IntelliJ.
 
-7) Output for Step 2 is available into `Run` section of IntelliJ.
+7) Output for Step 2 is available from `Run` section of IntelliJ.
 
 8) Postgres table data can be checked from shell using below steps
    - login into postgres database, run `psql -U postgres`
