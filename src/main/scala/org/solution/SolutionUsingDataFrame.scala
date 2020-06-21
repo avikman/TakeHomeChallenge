@@ -12,9 +12,9 @@ object SolutionUsingDataFrame extends Context {
   def main(args: Array[String]): Unit = {
     sparkSession.sparkContext.setLogLevel("ERROR")
 
-    val srcFilePath = "D:\\Data\\data.csv" //escape char required for '\'
+    val srcFilePath = "D:\\Data\\data.csv" //escape char required here
     val destFilePath = "fifa.parquet"
-    val pgUrl = "jdbc:postgresql://192.168.99.100:5432/test"
+    val pgUrl = "jdbc:postgresql://[HOST_NAME]:{PORT]/[DATABASE_NAME]"
     val pgTable = "test_result"
 
     val pgProperties = new Properties()
