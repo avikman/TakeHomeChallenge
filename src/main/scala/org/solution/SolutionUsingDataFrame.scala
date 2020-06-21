@@ -14,7 +14,7 @@ object SolutionUsingDataFrame extends Context {
 
     val srcFilePath = "D:\\Data\\data.csv" //escape char required here
     val destFilePath = "fifa.parquet"
-    val pgUrl = "jdbc:postgresql://[HOST_NAME]:{PORT]/[DATABASE_NAME]"
+    val pgUrl = "jdbc:postgresql://[HOST_NAME]:[PORT]/[DATABASE_NAME]"
     val pgTable = "test_result"
 
     val pgProperties = new Properties()
