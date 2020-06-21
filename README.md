@@ -16,10 +16,10 @@
 
 3) Download scala plugin for Intellij and add scala Framework Support for the imported project.
 
-4) Download source file from https://www.kaggle.com/karangadiya/fifa19/download.
+4) Download source file from https://www.kaggle.com/karangadiya/fifa19/download and unzip it.
 
 5) Open SolutionUsingDataFrame.scala in IntelliJ and specify below attributes as per your setup.
-   - source file path
+   - source file path along with filename
    - postgres database connection url and propertry file details
    - target table name into postgres database
 
