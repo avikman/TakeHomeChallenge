@@ -100,7 +100,7 @@ object SolutionUsingDataFrame extends Context {
       .mkString(", ")
       .replace("[", "")
       .replace("]", "")
-    println("Clubs having the most number of left footed midfielders under 30 years of age are " +
+    println("a) Clubs having the most number of left footed midfielders under 30 years of age are " +
       clubsWithLeftFootedMidfilders + ".")
 
     // solution for Problem 2.b
@@ -133,7 +133,7 @@ object SolutionUsingDataFrame extends Context {
       .avg("Overall")
       .orderBy(desc("avg(Overall)"))
     val bestTeamForPos = dfTeam.first()
-    println("Strongest team by overall rating for a 4-4-2 formation is " + bestTeamForPos(0).toString + ".")
+    println("b) Strongest team by overall rating for a 4-4-2 formation is " + bestTeamForPos(0).toString + ".")
 
     // solution for Problem 2.c
     val dfClubValue = dfFilterData.select("Club", "Value", "Wage")
@@ -144,7 +144,7 @@ object SolutionUsingDataFrame extends Context {
     val mostValuedTeam = dfClubValue.orderBy(desc("sum(Value)")).select("Club").first
     val mostWagedTeam = dfClubValue.orderBy(desc("sum(Wage)")).select("Club").first
     dfClubValue.unpersist()
-    print(mostValuedTeam(0).toString + " has the most expensive squad value in the world. ")
+    print("c) " + mostValuedTeam(0).toString + " has the most expensive squad value in the world. ")
     if (mostValuedTeam == mostWagedTeam) {
       println("That team also have the largest wage bill. ")
     } else {
@@ -158,7 +158,7 @@ object SolutionUsingDataFrame extends Context {
       .orderBy(desc("avg(Wage)"))
       .select("Position")
       .first()
-    println("Position pays the highest wage in average is " + mostWagedPosition(0).toString + ".")
+    println("d) Position pays the highest wage in average is " + mostWagedPosition(0).toString + ".")
 
     // solution for Problem 2.e
     val gkSkills = dfFilterData.select("Overall", "Position", "Crossing", "Finishing", "HeadingAccuracy",
@@ -170,7 +170,7 @@ object SolutionUsingDataFrame extends Context {
       .drop("Overall", "Position")
       .groupBy()
       .avg()
-    println("4 attributes which are most relevant to becoming a good goalkeeper are " + getTopColumns(gkSkills,4))
+    println("e) 4 attributes which are most relevant to becoming a good goalkeeper are " + getTopColumns(gkSkills,4))
 
     // solution for Problem 2.f
     val stSkills = dfFilterData.select("Overall", "Position", "Crossing", "Finishing", "HeadingAccuracy",
@@ -182,7 +182,7 @@ object SolutionUsingDataFrame extends Context {
       .drop("Overall", "Position")
       .groupBy()
       .avg()
-    println("5 attributes which are most relevant to becoming a top striker are " + getTopColumns(stSkills,5))
+    println("f) 5 attributes which are most relevant to becoming a top striker are " + getTopColumns(stSkills,5))
 
     dfFilterData.unpersist()
 
