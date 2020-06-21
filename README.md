@@ -9,7 +9,7 @@
    - run `docker run --name [container_name] -e POSTGRES_PASSWORD=[your_password] -d postgres`.
    - verify whether postgres container is created, run `docker ps`.
    - login into postgres database, run `psql -U postgres`.
-   - check existing databases, run `\l`.
+   - check existing database list, run `\l`.
    - create new database by running `CREATE DATABASE [database_name]` or take existing database for this project.
 
 2) Please download the project from gitHub and import it into Intellij.
