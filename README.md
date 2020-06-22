@@ -44,7 +44,7 @@ Verification done for **step3** from PostgresSQL shell
 ![Output from PostgresSQL shell](https://github.com/avikman/TakeHomeChallenge/blob/master/snaps/postgresdb.png?raw=true)
 
 
-## My approach
+## Approach
 
 For **step 1**, I have read data from csv file and written into parquet file after extracting digits from `Value` and `Wage` column and convert it into thousand pound currency. So that no need to perform repeated transformation for `Wage` and `Value` in step 2 & 3. By using parquet file format, faster performance is achived in step 2. To accomodate daily delta file, SCD type 1 will be applied.
 
