@@ -8,6 +8,7 @@
    - run `docker pull postgres:11.5`.
    - run `docker run --name [container_name] -e POSTGRES_PASSWORD=[your_password] -d postgres`.
    - verify whether postgres container is created, run `docker ps`.
+   - open the container, run `docker exec -it [container_name] sh` .
    - login into postgres database, run `psql -U postgres`.
    - check existing database list, run `\l`.
    - create new database by running `CREATE DATABASE [database_name]` or take existing database for this project.
